@@ -1222,6 +1222,19 @@ a {
    display: none;
     }
 
+    .codigo-texto {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 15px;
+}
+
+.codigo-rojo {
+    color: red;
+    text-decoration: underline;
+}
+
+
 /* Media query para dispositivos móviles */
 @media (max-width: 768px) {
     .nosotros-info {
