@@ -1,0 +1,23 @@
+/* seecion de servicios */
+.products {
+    /*padding: 60px 0;*/
+    text-align: center;
+    /*margin-top: 250px;*/
+}
+
+.products h2 {
+    font-size: 35px;
+    color: black;
+    padding-top: 66px;
+    transition: color 0.3s ease-in-out;
+}
+
+.products h2:hover {
+    color: #edc823;
+}
+
+.products p:last-child {
+    font-size: 18px;
+    color: gray;
+    padding: 0 151px 99px 151px;
+}

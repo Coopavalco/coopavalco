@@ -1,0 +1,14 @@
+main {
+    background: linear-gradient(180deg, transparent 0%, transparent calc(100vw * 789 / 1920 * 0.66),#fff calc(100vw * 789 / 1920 * 0.99), #fff 100%),url('../img/artboard/blank.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 0;
+    min-height: calc(100vw * 789 / 1920);
+    width: 100%;
+}
+
+@media (max-width: 991px) {   
+    main {
+    margin-top: 75px;
+    }
+}

@@ -1,0 +1,95 @@
+.info {
+    padding: 77px;
+    display: flex;
+    justify-content: space-evenly;
+    /*border-radius: 0px;*/
+    /*margin-bottom: 100px;*/
+    /*margin-top: 10px;*/
+    background-color: #f5d135;
+}
+
+.info-1 {
+    width: 300px;
+    padding: 10px 25px;
+    text-align: center;
+    border-radius: 20px;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    /* Añadir transición para los elementos */
+    opacity: 0;
+    /* Elementos invisibles al principio */
+    transform: translateY(50px);
+    /* Elementos desplazados hacia abajo al principio */
+}
+
+.info-1 img {
+    width: 60px;
+}
+
+.info-1 h3 {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.info-1 p {
+    font-size: 16px;
+    color: rgb(35, 34, 34);
+}
+
+@media (max-width: 991px) {
+
+    /* Estilos para la sección de información en dispositivos móviles */
+    .info {
+        flex-wrap: wrap;
+        /* padding: 50px 20px; */
+        /* Ajusta el relleno para adaptarse al contenido */
+        text-align: center;
+        /* Centra el contenido */
+        /* margin-left: 10px; */
+        /* Agrega un margen a la izquierda para correr la sección hacia la derecha */
+        /* margin-right: 10px; */
+        /* Agrega un margen a la derecha para correr la sección hacia la derecha */
+    }
+
+    .info div:nth-child(1) {
+        flex-grow: 0;
+        order: 1;
+        padding: 10px 25px 50px 25px;
+    }
+
+    .info div:nth-child(2) {
+        flex-grow: 1;
+        order: 3;
+        max-width: 700px;
+        padding: 50px 25px 10px 25px;
+    }
+
+    .info div:nth-child(3) {
+        flex-grow: 0;
+        order: 2;
+        padding: 10px 25px 50px 25px;
+    }
+
+}
+
+@media (max-width: 760px) {
+    .info div {
+        flex-grow: 1 !important;
+    }
+
+    .info div:nth-child(3) {
+        padding: 10px 25px !important;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .info {
+        padding: 66px calc((100vw - 1412px)/2);
+    }
+
+    .info-1 {
+        width: 350px;
+        padding: 20px 30px;
+    }
+}

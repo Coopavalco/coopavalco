@@ -1,0 +1,49 @@
+:root {
+    --blur: 6px;
+}
+
+body {
+    position: relative;
+}
+
+.body.splash{
+    filter: blur(var(--blur));
+	-webkit-filter: blur(var(--blur));
+}
+
+.verbum {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80vw;
+    height: 100vh;
+    max-width: calc(90vh * 1070 / 720);
+}
+
+.verbum img {
+    background-color: #fff;
+    border-radius: 33px;
+    box-shadow: 0 0 11px #ff0, 0 0 55px #fff;
+    height: calc(80vw * 720 / 1070);
+    padding: 33px;
+    max-height: 90vh;
+}
+
+#splash {
+    background: url('../zoz/opacity.0.5.png');
+    display: none;
+    justify-content: center;
+    height: 100vh;
+    left: 0;
+    overflow: scroll;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 999666;
+}
+
+#splash.splash {
+    display: flex;
+    opacity: 1;
+}

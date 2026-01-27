@@ -1,0 +1,131 @@
+.body {
+    text-align: center;
+}
+
+.body h2 {
+  font-size: 35px;
+  color: black;
+  padding-top: 77px;
+    transition: color 0.3s ease-in-out;
+}
+
+.body h2:hover {
+    color: #6d522a;
+}
+
+.body p {
+    font-size: 18px;
+    color: gray;
+    padding: 44px 151px 99px 151px;
+}
+
+.values {
+    padding-bottom: 99px;
+}
+
+.mv {
+    padding-bottom: 198px;
+}
+
+.values h2,
+.mv h2 {
+    padding: 0 0 44px 0;
+}
+
+.values div,
+.mv div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.values div {
+    gap: 66px;
+    
+}
+.mv div {
+    gap: 99px;
+}
+
+.values .value,
+.mv .mission,
+.mv .vision {
+    border-radius: 11px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    padding: 1em;
+    justify-content: space-between;
+    gap: 1.618em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    img {
+        border-radius: 8px;
+    }
+    p {
+        padding: 0 !important;
+    }
+}
+
+.values .value {
+    background-color: #f8d250;
+    width: 333px;
+    img {
+        border: solid 1px #fff;
+    }
+}
+
+.mv .mission,
+.mv .vision {
+    background-color: #f2f2f2;
+    width: 666px;
+    img {
+        border: solid 1px #000;
+    }
+    p {
+        color: #0d0d0d;
+    }
+}
+
+.values .value:hover,
+.mv .mission:hover,
+.mv .vision:hover {
+    transform: scale(1.06);
+}
+
+@media (min-width: 1210px) {   
+    .body p {
+    padding-left: calc((100vw - 884px - 30px) / 2);
+    padding-right: calc((100vw - 884px - 30px) / 2);
+    }
+}
+
+@media (min-width: 991px) {   
+    .body > h2 {
+    padding-top: 152px;
+    }
+}
+
+@media (max-width: 991px) {   
+    .body {
+        padding-left: calc((100vw - 689px) / 2);
+        padding-right: calc((100vw - 689px) / 2);
+    }
+    main.body p {
+        padding: 44px 0 99px 0;
+    }
+}
+
+@media (max-width: 803px) {   
+    .body {
+        padding-left: 44px;
+        padding-right: 44px;
+    }
+}
+
+@media (max-width: 754px) {   
+    .mv .mission,
+    .mv .vision {
+        width: calc(100vw - 88px);
+    }
+}
