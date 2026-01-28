@@ -1,0 +1,28 @@
+.mv {
+  padding-bottom: 176px;
+}
+
+.mv div {
+    margin: auto;
+    flex-flow: column;
+}
+
+div.mission div.img {
+    position: relative;
+    width: 100%;
+}
+
+div.mission div.img a{
+    background: #6d522a url('../img/download.svg');
+    background-size: 33px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    bottom: 11px;
+    cursor: pointer;
+    height: 55px;
+    margin: 0;
+    position: absolute;
+    right: 11px;
+    width: 55px;
+}
