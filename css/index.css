@@ -1,15 +1,9 @@
-/*.header {
-    height: calc(787 * 100vw / 1920);
-}*/
-
 .logo img {
     visibility: hidden;
 }
 
 @media (max-width: 991px) {
-    
-.logo img {
-    visibility: unset;
-}
-
+    .logo img {
+        visibility: unset;
+    }
 }

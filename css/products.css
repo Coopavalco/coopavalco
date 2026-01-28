@@ -21,3 +21,15 @@
     color: gray;
     padding: 0 151px 99px 151px;
 }
+
+@media (max-width: 991px) {
+
+    .logo img {
+        visibility: unset;
+    }
+
+    .products p:last-child {
+        margin: 0 calc((33.3vw - 30px) / 2);
+        padding: 0 0 99px 0;
+    }
+}

@@ -833,11 +833,10 @@ into cards.css
 }
 @media (max-width: 991px) {
     .menu {
-        /*background: linear-gradient(45deg, #ffffff 30%, #fdf4dc 33%, #f8d151 50%);*/
         background: linear-gradient(85deg, #fff 0%, #fff 4.6%, #fdf4dc 4.6%, #fdf4dc 15.8%, #f8d151 15.8%);
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-        /* Opcional para sombra sutil */
         padding: 10px;
+        position: fixed;
     }
 
     .menu label {
@@ -856,6 +855,11 @@ into cards.css
     .menu .navbar ul li {
         display: flex;
         width: 100%;
+    }
+
+    .menu .navbar ul li:last-child {
+        border-bottom: solid 1px rgb(89, 56, 20,0.68535);
+        box-shadow: 0 11px 9px rgb(0,0,0,0.42358)
     }
 
     .menu .navbar ul li a {

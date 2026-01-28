@@ -20,44 +20,41 @@
 
 .allies h2 {
     font-size: 2.5rem;
-    /* Aumenta el tamaño de la fuente */
-    /*margin-top: -80px;*/
     transition: color 0.3s ease, transform 0.3s ease;
-    /* Agrega una transición para un efecto suave */
 }
 
 .allies h2:hover {
     color: #f5d135;
-    /* Cambia el color del texto al pasar el cursor */
     transform: scale(1.1);
-    /* Escala ligeramente el texto al pasar el cursor */
 }
 
 .allies p {
-  font-size: 18px;
-  color: gray;
-  padding: 50px 151px;
+    font-size: 18px;
+    color: gray;
+    padding: 50px 151px;
 }
 
 .ally img {
     width: 180px;
-    /* Ajusta el tamaño según tus necesidades */
     height: 100px;
-    /* Ajusta el tamaño según tus necesidades */
     object-fit: contain;
-    /* Mantiene la proporción de la imagen y se ajusta dentro del contenedor */
     margin-bottom: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Añade una transición para transform y box-shadow */
 }
 
 .ally img:hover {
     transform: scale(1.1);
-    /* Escala ligeramente la imagen */
 }
 
 @media (min-width: 1544px) {
-  .allies-logos {
-    padding: 66px calc((100vw - 1412px)/2);
-  }
+    .allies-logos {
+        padding: 66px calc((100vw - 1412px)/2);
+    }
+}
+
+@media (max-width: 991px) {
+    .allies p {
+        margin: 0 calc((33.3vw - 30px) / 2);
+        padding: 50px 0;
+    }
 }
