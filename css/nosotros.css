@@ -2,17 +2,20 @@
     padding-bottom: 99px;
 }
 
-.mv {
+.mv,
+.sg {
     padding-bottom: 99px;
 }
 
 .values h2,
-.mv h2 {
+.mv h2,
+.sg h2 {
     padding: 0 0 44px 0;
 }
 
 .values div,
-.mv div {
+.mv div,
+.sg div {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -20,27 +23,44 @@
 
 .values div {
     gap: 66px;
-    
+
 }
-.mv div {
+
+.mv div,
+.sg div {
     gap: 99px;
 }
+
 
 .values .value,
 .mv .mission,
 .mv .vision {
+    justify-content: space-between;
+}
+
+.sg .strategicGoals,
+.sg .strategy {
+    justify-content: space-around;
+}
+
+.values .value,
+.mv .mission,
+.mv .vision,
+.sg .strategicGoals,
+.sg .strategy {
     border-radius: 11px;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
     padding: 1em;
-    justify-content: space-between;
     gap: 1.618em;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
+
     img {
         border-radius: 8px;
     }
+
     p {
         padding: 0 !important;
     }
@@ -49,32 +69,71 @@
 .values .value {
     background-color: #f8d250;
     width: 333px;
+
+    div {
+        background-color: #fff;
+        border: solid 1px #bccbcc;
+        border-radius: 100%;
+        box-shadow: 0 0 11px #0008;
+        height: 111px;
+        margin: 22px auto 0 auto;
+        padding: 22px;
+        width: 111px;
+    }
+
     img {
-        border: solid 1px #fff;
+        max-width: 66px;
+        max-height: 66px;
+    }
+}
+
+
+
+.mv .mission,
+.mv .vision,
+.sg .strategicGoals,
+.sg .strategy {
+    width: 666px;
+
+    img {
+        border: solid 1px #000;
+    }
+
+    p {
+        color: #0d0d0d;
     }
 }
 
 .mv .mission,
 .mv .vision {
     background-color: #f2f2f2;
-    width: 666px;
-    img {
-        border: solid 1px #000;
-    }
-    p {
-        color: #0d0d0d;
-    }
+}
+
+.sg .strategicGoals,
+.sg .strategy {
+    background-color: #bccbcc;
+    color: #322322;
+}
+
+.sg .strategicGoals p,
+.sg .strategy p {
+    color: #544544;
 }
 
 .values .value:hover,
 .mv .mission:hover,
-.mv .vision:hover {
+.mv .vision:hover,
+.sg .strategicGoals:hover,
+.sg .strategy:hover {
     transform: scale(1.06);
 }
 
-@media (max-width: 754px) {   
+@media (max-width: 754px) {
+
     .mv .mission,
-    .mv .vision {
+    .mv .vision,
+    .sg .strategicGoals,
+    .sg .strategy {
         width: calc(100vw - 88px);
     }
 }
