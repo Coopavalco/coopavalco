@@ -1,0 +1,11 @@
+.verbum {
+    max-width: 888px;
+}
+
+.verbum object {
+    background-color: #fff;
+    border-radius: 33px;
+    box-shadow: 0 0 11px #ff0, 0 0 55px #fff;
+    height: 606px;
+    padding: 33px;
+}
