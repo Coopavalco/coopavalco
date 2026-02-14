@@ -46,6 +46,8 @@
     <link href="css/main.css" rel="stylesheet" />
     <link href="css/nosotros.css" rel="stylesheet" />
     <link href="css/elecciones.css" rel="stylesheet" />
+    <link href="css/zplazh.css" rel="stylesheet" />
+    <link href="css/vote.css" rel="stylesheet" />
     <link type="image/png" href="og/coopavalco.png" rel="icon" />
 </head>
 
@@ -75,6 +77,19 @@
             <p>
                 <img src="img/splash.jpg">
             </p>
+            <div id="voting">Vota aquí...</div>
+            <script>
+                function vote(e) {
+                    let v = document.querySelector('#splash');
+                    if (v) {
+                        document.querySelector('body .body').classList.add('splash');
+                        v.classList.add('splash');
+                    } else {
+                        alert('Algo ha ocurrido.\nContactar a soporte.\n\nelecciones@coopavalco.com')
+                    }
+                };
+                document.querySelector('main.body #voting').addEventListener('click', vote);
+            </script>
             <!-- Comunicados -->
             <div class="mv">
                 <h2>Comunicados</h2>
@@ -214,8 +229,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/min/tiny-slider.js"></script>
     -->
+    <div id="splash" style="top: 0px">
+        <div id="verbum" class="verbum">
+            <object id="elecciones" data="https://maiqui.com/coopavalco/vote.asp">
+        </div>
+    </div>
 </body>
 <script class="maiqui">
+    document.body.querySelectorAll('.body,#splash').forEach(x => { /*x.classList.add('splash');*/ if (x.id == 'splash') x.addEventListener('click', function (e) { document.body.querySelectorAll('.body,#splash').forEach(x => x.classList.remove('splash')) }) });
+    document.body.querySelector('#splash object#elecciones').addEventListener('click',x => x.stopPropagation());
     reload();
 </script>
 
