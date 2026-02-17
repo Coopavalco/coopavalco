@@ -74,9 +74,6 @@
         <!-- Main -->
         <main class="body container">
             <h2>Elecciones</h2>
-            <p>
-                <img src="img/splash.jpg">
-            </p>
             <div id="voting">Vota aquí...</div>
             <script>
                 function vote(e) {
@@ -191,6 +188,9 @@
                     </div>
                 </div>
             </div>
+            <p>
+                <img src="img/splash.jpg">
+            </p>
         </main>
         <!-- Floating -->
         <!--         
@@ -231,13 +231,13 @@
     -->
     <div id="splash" style="top: 0px">
         <div id="verbum" class="verbum">
-            <object id="elecciones" data="https://maiqui.com/coopavalco/vote.asp">
+            <object id="elecciones" data="vote.html">
         </div>
     </div>
 </body>
 <script class="maiqui">
     document.body.querySelectorAll('.body,#splash').forEach(x => { /*x.classList.add('splash');*/ if (x.id == 'splash') x.addEventListener('click', function (e) { document.body.querySelectorAll('.body,#splash').forEach(x => x.classList.remove('splash')) }) });
-    document.body.querySelector('#splash object#elecciones').addEventListener('click',x => x.stopPropagation());
+    document.body.querySelector('#splash object#elecciones').addEventListener('click', x => x.stopPropagation());
     reload();
 </script>
 

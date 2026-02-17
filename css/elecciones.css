@@ -5,6 +5,14 @@
     --kciht: -3px;
 }
 
+body main.body h2 {
+    padding-bottom: 66px;
+}
+
+body main.body > p {
+    padding-bottom: 176px;
+}
+
 body main.body > p > img {
     background-color: #828282;
     border-radius: 33px;
@@ -15,10 +23,6 @@ body main.body > p > img {
 
 body main.body > p > img:hover {
     transform: scale(1.06);
-}
-
-.mv {
-    padding-bottom: 176px;
 }
 
 .mv div {
