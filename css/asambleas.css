@@ -1,0 +1,95 @@
+:root {
+    --border: #fffb;
+    --shining: 4px;
+    --thick: 3px;
+    --kciht: -3px;
+}
+
+body main.body h2 {
+    padding-bottom: 66px;
+}
+
+body main.body > p {
+    padding-bottom: 176px;
+}
+
+body main.body > p > img {
+    background-color: #828282;
+    border-radius: 33px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+}
+
+body main.body > p > img:hover {
+    transform: scale(1.06);
+}
+
+.mv div {
+    margin: auto;
+    flex-flow: column;
+}
+
+div.mission div.img {
+    position: relative;
+    width: 100%;
+}
+
+div.mission div.img a {
+    background: #6d522a url('../img/download.svg');
+    background-size: 33px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    bottom: 11px;
+    cursor: pointer;
+    height: 55px;
+    margin: 0;
+    position: absolute;
+    right: 11px;
+    width: 55px;
+}
+
+div.mission div.img:after {
+    content: ' ';
+    background: url('../res/coopavalco.hand.png');
+    background-size: contain;
+    background-position: 0;
+    background-repeat: no-repeat;
+    height: 60%;
+    left: 22px;
+    position: absolute;
+    top: 22px;
+    width: 50%;
+    filter: drop-shadow(var(--kciht) var(--thick) var(--shining) var(--border))
+            drop-shadow(var(--kciht) var(--kciht) var(--shining) var(--border)) 
+            drop-shadow(var(--kciht) 0 var(--shining) var(--border)) 
+            drop-shadow(0 var(--kciht) var(--shining) var(--border)) 
+            drop-shadow(0 var(--thick) var(--shining) var(--border)) 
+            drop-shadow(var(--thick) 0 var(--shining) var(--border)) 
+            drop-shadow(var(--thick) var(--thick) var(--shining) var(--border)) 
+            drop-shadow(var(--thick) var(--kciht) var(--shining) var(--border));
+    -webkit-filter: drop-shadow(var(--kciht) var(--thick) var(--shining) var(--border))
+                    drop-shadow(var(--kciht) var(--kciht) var(--shining) var(--border)) 
+                    drop-shadow(var(--kciht) 0 var(--shining) var(--border)) 
+                    drop-shadow(0 var(--kciht) var(--shining) var(--border)) 
+                    drop-shadow(0 var(--thick) var(--shining) var(--border)) 
+                    drop-shadow(var(--thick) 0 var(--shining) var(--border)) 
+                    drop-shadow(var(--thick) var(--thick) var(--shining) var(--border)) 
+                    drop-shadow(var(--thick) var(--kciht) var(--shining) var(--border));
+}
+
+div.mission div.img:before {
+    content: ' ';
+    background: url('../res/card.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    height: calc(100% - 2px);
+    left: 1px;
+    opacity: 0.777;
+    position: absolute;
+    top: 1px;
+    width: calc(100% - 2px);
+}
