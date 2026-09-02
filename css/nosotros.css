@@ -3,19 +3,22 @@
 }
 
 .mv,
-.sg {
+.sg,
+.pl {
     padding-bottom: 99px;
 }
 
 .values h2,
 .mv h2,
-.sg h2 {
+.sg h2,
+.pl h2 {
     padding: 0 0 44px 0;
 }
 
 .values div,
 .mv div,
-.sg div {
+.sg div,
+.pl div {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -27,7 +30,8 @@
 }
 
 .mv div,
-.sg div {
+.sg div,
+.pl div {
     gap: 99px;
 }
 
@@ -39,7 +43,8 @@
 }
 
 .sg .strategicGoals,
-.sg .strategy {
+.sg .strategy,
+.pl .polity {
     justify-content: space-around;
 }
 
@@ -47,7 +52,8 @@
 .mv .mission,
 .mv .vision,
 .sg .strategicGoals,
-.sg .strategy {
+.sg .strategy,
+.pl .polity {
     border-radius: 11px;
     display: flex;
     flex-wrap: nowrap;
@@ -92,7 +98,8 @@
 .mv .mission,
 .mv .vision,
 .sg .strategicGoals,
-.sg .strategy {
+.sg .strategy,
+.pl .polity {
     width: 666px;
 
     img {
@@ -110,13 +117,15 @@
 }
 
 .sg .strategicGoals,
-.sg .strategy {
+.sg .strategy,
+.pl .polity {
     background-color: #bccbcc;
     color: #322322;
 }
 
 .sg .strategicGoals p,
-.sg .strategy p {
+.sg .strategy p,
+.pl .polity p {
     color: #544544;
 }
 
@@ -124,7 +133,8 @@
 .mv .mission:hover,
 .mv .vision:hover,
 .sg .strategicGoals:hover,
-.sg .strategy:hover {
+.sg .strategy:hover,
+.pl .polity:hover {
     transform: scale(1.06);
 }
 
@@ -133,7 +143,8 @@
     .mv .mission,
     .mv .vision,
     .sg .strategicGoals,
-    .sg .strategy {
+    .sg .strategy,
+    .pl .polity {
         width: calc(100vw - 88px);
     }
 }
