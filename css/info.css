@@ -5,7 +5,12 @@
     /*border-radius: 0px;*/
     /*margin-bottom: 100px;*/
     /*margin-top: 10px;*/
-    background-color: #f5d135;
+    background: linear-gradient(to bottom, transparent, #ffe595)
+}
+
+.info.bis {
+    background: url(../img/card-top.png) no-repeat top center, linear-gradient(to bottom, #ffe595, #ffca22);
+    background-size: 100vw max(100%,379px);
 }
 
 .info-1 {

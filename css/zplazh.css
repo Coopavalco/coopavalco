@@ -29,7 +29,8 @@ body {
     max-height: 90vh;
 }
 
-#splash {
+#splash,
+#splashPolicies {
     background: url('../zoz/opacity.0.5.png');
     display: none;
     justify-content: center;
@@ -43,7 +44,8 @@ body {
     z-index: 999666;
 }
 
-#splash.splash {
+#splash.splash,
+#splashPolicies.splash {
     display: flex;
     opacity: 1;
 }

@@ -61,7 +61,22 @@ body {
     max-height: 55px;
     max-width: 400px;
     margin-left: 0;
-    /* Ajusta el margen negativo */
+    filter: drop-shadow(var(--kciht) var(--thick) var(--shining) var(--border))
+            drop-shadow(var(--kciht) var(--kciht) var(--shining) var(--border)) 
+            drop-shadow(var(--kciht) 0 var(--shining) var(--border)) 
+            drop-shadow(0 var(--kciht) var(--shining) var(--border)) 
+            drop-shadow(0 var(--thick) var(--shining) var(--border)) 
+            drop-shadow(var(--thick) 0 var(--shining) var(--border)) 
+            drop-shadow(var(--thick) var(--thick) var(--shining) var(--border)) 
+            drop-shadow(var(--thick) var(--kciht) var(--shining) var(--border));
+    -webkit-filter: drop-shadow(var(--kciht) var(--thick) var(--shining) var(--border))
+                    drop-shadow(var(--kciht) var(--kciht) var(--shining) var(--border)) 
+                    drop-shadow(var(--kciht) 0 var(--shining) var(--border)) 
+                    drop-shadow(0 var(--kciht) var(--shining) var(--border)) 
+                    drop-shadow(0 var(--thick) var(--shining) var(--border)) 
+                    drop-shadow(var(--thick) 0 var(--shining) var(--border)) 
+                    drop-shadow(var(--thick) var(--thick) var(--shining) var(--border)) 
+                    drop-shadow(var(--thick) var(--kciht) var(--shining) var(--border));
 }
 
 .navbar {
@@ -75,11 +90,12 @@ body {
 }
 
 .menu .navbar ul li a {
-    font-size: 16px;
-    padding: 10px 20px;
     color: black;
+    font-size: 16px;
     font-weight: 800;
     line-height: 1;
+    padding: 10px 20px;
+    text-transform: uppercase;
 }
 
 .navbar ul li a:hover {
@@ -260,12 +276,12 @@ body {
 .quick-btn {
     width: 66px;
     height: 66px;
-    background-color: #f5d135;
+    background-color: rgb(89, 56, 20);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(89, 56, 20);
+    color: #f5d135;
     /*color: #ffffff;*/
     cursor: pointer;
     /*transition: transform 0.3s ease, background-color 0.3s ease;*/
@@ -866,6 +882,7 @@ into cards.css
         color: rgb(0, 0, 0);
         padding: 20px;
         width: 100%;
+        text-transform: none;
     }
 
     .menu .navbar ul li a:hover {

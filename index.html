@@ -44,10 +44,13 @@
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/index.css" rel="stylesheet" />
     <link href="css/products.css" rel="stylesheet" />
-    <link href="css/slider.css" rel="stylesheet" />
+    <!-- <link href="css/slider.css" rel="stylesheet" /> -->
+    <!-- <link href="css/sunset.css" rel="stylesheet" /> -->
+    <link href="css/slides.css" rel="stylesheet" />
     <link href="css/cards.css" rel="stylesheet" />
     <link href="css/info.css" rel="stylesheet" />
     <link href="css/allies.css" rel="stylesheet" />
+    <link href="css/policies.css" rel="stylesheet" />
     <link href="css/zplazh.css" rel="stylesheet" />
     <link type="image/png" href="og/coopavalco.png" rel="icon" />
 </head>
@@ -72,6 +75,7 @@
                     </nav>
                 </div>
                 <!-- index.html -->
+                <!--
                 <div class="slider-wrapper">
                     <div class="vertical-slider">
                         <div class="slider-container">
@@ -92,9 +96,52 @@
                         </div>
                     </div>
                 </div>
+                -->
+                <div class="slides-wrapper">
+                    <div id="vertical-slides" class="vertical-slides">
+                        <div class="slides-container">
+                            <div class="slide">
+                                <div id="img"><img alt="Coopavalco" src="img/artboard/blank.png"></div>
+                                <div id="message">
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script id="slides-script">
+                    i = Math.ceil(Math.random() * 3 - 1);
+                    t = ['mission', 'vision', 'banner'][i];
+                    s = ['En COOPAVALCO transformamos el afianzamiento en confianza, respaldo y oportunidades para crecer.',
+                        'Ofrecemos un modelo de afianzamiento innovador, ágil y diferente.',
+                        'No solo afianzamos obligaciones: construimos soluciones, protegemos relaciones comerciales y acompañamos a nuestros aliados y asociados en cada etapa.'][i];
+                    console.log(i + " := " + t + "\n" + s);
+                    vs = document.querySelector('div#vertical-slides');
+                    if (vs) {
+                        vs.classList.add(t);
+                        vs = vs.querySelector('div.slides-container div.slide div#message');
+                        if (vs) {
+                            vs.classList.add(t);
+                            vs = vs.querySelector('div');
+                            if (vs) vs.innerText = s;
+                        }
+                    }
+                </script>
             </header>
         </div>
         <!-- Tarjetas con imágenes -->
+        <!--
+        <div class="sunset container">
+            <div class="sunset-container">
+                <div class="sun"></div>
+                <div class="ground">
+                    <div class="people">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        -->
         <main class="products container">
             <h2>Nuestros Servicios</h2>
             <div class="cards-container">
@@ -182,6 +229,16 @@
     </section>
 -->
         <section class="info container">
+            <div class="info-1" data-aos="fade-up" data-aos-delay="400">
+                <img src="img/phone.svg" alt="Icono de Teléfono">
+                <h3>Nuestro Teléfono</h3>
+                <p>
+                    <a href="tel:018000415858">Tel: 01-8000-415-858</a>
+                    <a href="tel:3009175032">Cel: 300-917-5032 </a>
+                </p>
+            </div>
+        </section>
+        <section class="info container bis">
             <div class="info-1" data-aos="fade-up">
                 <img src="img/time.svg" alt="Icono de Horario">
                 <h3>Horario de Atención</h3>
@@ -192,14 +249,6 @@
                 <h3>Nuestra Ubicación</h3>
                 <p>Calle 35 #18-65 Centro Comercial Rosedal torre sur oficina 604</p>
                 <p>Bucaramanga - Santander</p>
-            </div>
-            <div class="info-1" data-aos="fade-up" data-aos-delay="400">
-                <img src="img/phone.svg" alt="Icono de Teléfono">
-                <h3>Nuestro Teléfono</h3>
-                <p>
-                    <a href="tel:018000415858">Tel: 01-8000-415-858</a>
-                    <a href="tel:3009175032">Cel: 300-917-5032 </a>
-                </p>
             </div>
         </section>
         <section class="allies container">
@@ -227,14 +276,44 @@
                 </div>
             </div>
         </section>
+        <section class="policies container">
+            <div id="sitePolicy">POLÍTICA SITIO WEB DE COOPAVALCO</div>
+            <div id="habeasData">HABEAS DATA</div>
+            <div id="dataPolicy">POLÍTICA DE TRATAMIENTO DE DATOS</div>
+            <div id="cookiesPolicy">POLÍTICA DE COOKIES</div>
+            <div id="sarlaftPolicy">POLÍTICA SARLAFT</div>
+            <div id="privacyNotice">AVISO DE PRIVACIDAD</div>
+            <script>
+                function sitePolicy(e) { splashPolicy(e, 'sitePolicy'); }
+                function habeasData(e) { splashPolicy(e, 'habeasData'); }
+                function dataPolicy(e) { splashPolicy(e, 'dataPolicy'); }
+                function cookiesPolicy(e) { splashPolicy(e, 'cookiesPolicy'); }
+                function sarlaftPolicy(e) { splashPolicy(e, 'sarlaftPolicy'); }
+                function privacyNotice(e) { splashPolicy(e, 'privacyNotice'); }
+                function splashPolicy(e, s) {
+                    let v = document.querySelector('#splashPolicies');
+                    if (v) {
+                        document.querySelector('body .body').classList.add('splash');
+                        v.querySelector('#splashed').setAttribute('data', 'policies/' + s + '.html');
+                        v.classList.add('splash');
+                    } else {
+                        alert('Algo ha ocurrido.\nA soporte contacte.\n\nsoporte@coopavalco.com')
+                    }
+                };
+                document.querySelector('section.policies.container #sitePolicy').addEventListener('click', sitePolicy);
+                document.querySelector('section.policies.container #habeasData').addEventListener('click', habeasData);
+                document.querySelector('section.policies.container #dataPolicy').addEventListener('click', dataPolicy);
+                document.querySelector('section.policies.container #cookiesPolicy').addEventListener('click', cookiesPolicy);
+                document.querySelector('section.policies.container #sarlaftPolicy').addEventListener('click', sarlaftPolicy);
+                document.querySelector('section.policies.container #privacyNotice').addEventListener('click', privacyNotice);
+            </script>
+        </section>
         <!-- Floating -->
-        <!--         
         <a href="whatsapp://send?phone=+573006542339" target="_blank" style="margin: 0;">
             <div class="quick-btn">
                 <i class="fab fa-whatsapp"></i> <span></span>
             </div>
         </a>
-        -->
         <!--
     <div class="floating-buttons">
         <div class="main-btn">
@@ -298,6 +377,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/min/tiny-slider.js"></script>
     <!-- script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script -->
     <script src="js/aos.js"></script>
+    <!--
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var slider = tns({
@@ -342,6 +422,7 @@
             });
         });
     </script>
+    -->
     <script>
         AOS.init();
     </script><!--
@@ -352,9 +433,15 @@
         });
     </script>
 -->
+    <div id="splashPolicies" style="top: 0px">
+        <div id="verbum" class="verbum">
+            <object id="splashed" data="policies/">
+        </div>
+    </div>
 </body>
 <script class="maiqui">
-    // document.body.querySelectorAll('.body,#splash').forEach(x => { x.classList.add('splash'); if (x.id == 'splash') x.addEventListener('click', function (e) { document.body.querySelectorAll('.body,#splash').forEach(x => x.classList.remove('splash')) }) });
+    document.body.querySelectorAll('.body,#splashPolicies').forEach(x => { /*x.classList.add('splash');*/ if (x.id == 'splashPolicies') x.addEventListener('click', function (e) { document.body.querySelectorAll('.body,#splashPolicies').forEach(x => x.classList.remove('splash')) }) });
+    document.body.querySelector('#splashPolicies object#splashed').addEventListener('click', x => x.stopPropagation());
     reload();
 </script>
 

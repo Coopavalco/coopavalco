@@ -1,0 +1,233 @@
+:root {
+    --border: #fffb;
+    --shining: 4px;
+    --thick: 3px;
+    --kciht: -3px;
+}
+
+.slides-wrapper {
+    position: relative;
+    overflow: hidden;
+    margin-top: 0;
+}
+
+.vertical-slides {
+    position: relative;
+}
+
+div.slides-wrapper div.vertical-slides:before {
+    content: ' ';
+    background: url('../res/coopavalco.full.png');
+    background-size: contain;
+    background-position: 0;
+    background-repeat: no-repeat;
+    height: 60%;
+    left: 22px;
+    position: absolute;
+    top: 22px;
+    width: 50%;
+    filter: drop-shadow(var(--kciht) var(--thick) var(--shining) var(--border)) drop-shadow(var(--kciht) var(--kciht) var(--shining) var(--border)) drop-shadow(var(--kciht) 0 var(--shining) var(--border)) drop-shadow(0 var(--kciht) var(--shining) var(--border)) drop-shadow(0 var(--thick) var(--shining) var(--border)) drop-shadow(var(--thick) 0 var(--shining) var(--border)) drop-shadow(var(--thick) var(--thick) var(--shining) var(--border)) drop-shadow(var(--thick) var(--kciht) var(--shining) var(--border));
+    -webkit-filter: drop-shadow(var(--kciht) var(--thick) var(--shining) var(--border)) drop-shadow(var(--kciht) var(--kciht) var(--shining) var(--border)) drop-shadow(var(--kciht) 0 var(--shining) var(--border)) drop-shadow(0 var(--kciht) var(--shining) var(--border)) drop-shadow(0 var(--thick) var(--shining) var(--border)) drop-shadow(var(--thick) 0 var(--shining) var(--border)) drop-shadow(var(--thick) var(--thick) var(--shining) var(--border)) drop-shadow(var(--thick) var(--kciht) var(--shining) var(--border));
+    z-index: 111;
+}
+
+div.slides-wrapper div.vertical-slides div#img:after {
+    content: '';
+    position: absolute;
+    filter: drop-shadow(var(--kciht) var(--thick) var(--shining) var(--border)) drop-shadow(var(--kciht) var(--kciht) var(--shining) var(--border)) drop-shadow(var(--kciht) 0 var(--shining) var(--border)) drop-shadow(0 var(--kciht) var(--shining) var(--border)) drop-shadow(0 var(--thick) var(--shining) var(--border)) drop-shadow(var(--thick) 0 var(--shining) var(--border)) drop-shadow(var(--thick) var(--thick) var(--shining) var(--border)) drop-shadow(var(--thick) var(--kciht) var(--shining) var(--border));
+    -webkit-filter: drop-shadow(var(--kciht) var(--thick) var(--shining) var(--border)) drop-shadow(var(--kciht) var(--kciht) var(--shining) var(--border)) drop-shadow(var(--kciht) 0 var(--shining) var(--border)) drop-shadow(0 var(--kciht) var(--shining) var(--border)) drop-shadow(0 var(--thick) var(--shining) var(--border)) drop-shadow(var(--thick) 0 var(--shining) var(--border)) drop-shadow(var(--thick) var(--thick) var(--shining) var(--border)) drop-shadow(var(--thick) var(--kciht) var(--shining) var(--border));
+}
+
+div.slides-wrapper div.vertical-slides.banner div#img:after {
+    background-image: url('../img/artboard/people.clip.png');
+    background-size: contain;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    bottom: 0;
+    height: 55%;
+    right: 0;
+    width: 100%;
+}
+
+div.slides-wrapper div.vertical-slides.mission div#img:after {
+    background-image: url('../img/artboard/planners.png');
+    background-position: top center;
+}
+
+div.slides-wrapper div.vertical-slides.vision div#img:after {
+    background-image: url('../img/artboard/targets.png');
+    background-position: top right;
+}
+
+div.slides-wrapper div.vertical-slides.mission div#img:after,
+div.slides-wrapper div.vertical-slides.vision div#img:after {
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 33px;
+    height: calc(100% - 150px);
+    right: 75px;
+    top: 75px;
+    width: 50%;
+}
+
+div.slides-wrapper div.vertical-slides div.slide div#message {
+    color: #573512;
+    display: flex;
+    flex-flow: column;
+    font-size: 1.318em;
+    font-weight: bold;
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
+
+div.slides-wrapper div.vertical-slides div.slide div#message div {
+    z-index: 1;
+}
+
+div.slides-wrapper div.vertical-slides.banner div.slide div#message {
+    bottom: 55%;
+    height: calc(45% - 75px);
+    right: 0;
+    width: 66%;
+}
+
+
+div.slides-wrapper div.vertical-slides.mission div.slide div#message,
+div.slides-wrapper div.vertical-slides.vision div.slide div#message {
+    height: 1px;
+    left: 22%;
+    top: 66%;
+    width: 55%;
+}
+
+div.slides-wrapper div.vertical-slides.mission div.slide div#message div,
+div.slides-wrapper div.vertical-slides.vision div.slide div#message div {
+    background-color: #fff8;
+    border-radius: 33px;
+    font-size: 1.1em;
+    padding: 3%;
+}
+
+.slides-container {
+    display: flex;
+    flex-direction: column;
+    height: 600%;
+    /* Ajusta según el número de slides */
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    height: calc(100% / 3);
+}
+
+.slide div#img {
+    position: relative;
+}
+
+.slide div#img img {
+    width: 100vw;
+}
+
+@media (max-width: 991px) {
+    .slides-wrapper {
+        margin-top: 75px;
+    }
+
+    div.slides-wrapper div.vertical-slides:before {
+        content: none;
+    }
+
+    div.slides-wrapper div.vertical-slides div.slide div#message {
+        font-size: 1.25em;
+    }
+
+    div.slides-wrapper div.vertical-slides.banner div.slide div#message {
+        bottom: 0;
+        height: 30%;
+        padding: 0 6%;
+        right: 0;
+        width: 100%;
+    }
+
+    div.slides-wrapper div.vertical-slides.mission div.slide div#img img,
+    div.slides-wrapper div.vertical-slides.vision div.slide div#img img {
+        height: 55vh;
+    }
+
+    div.slides-wrapper div.vertical-slides.mission div.slide div#message,
+    div.slides-wrapper div.vertical-slides.vision div.slide div#message {
+        bottom: 0;
+        height: unset;
+        left: 0;
+        top: unset;
+        width: 100%;
+    }
+
+    div.slides-wrapper div.vertical-slides.mission div.slide div#message div,
+    div.slides-wrapper div.vertical-slides.vision div.slide div#message div {
+        border-radius: 0;
+    }
+
+    div.slides-wrapper div.vertical-slides.banner div#img:after {
+        background-image: url('../img/artboard/people.whole.png');
+        height: 100%;
+    }
+
+    div.slides-wrapper div.vertical-slides.mission div#img:after,
+    div.slides-wrapper div.vertical-slides.vision div#img:after {
+        border-radius: 0;
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    div.slides-wrapper div.vertical-slides.banner div#img:after {
+        height: 100%;
+    }
+
+
+    div.slides-wrapper div.vertical-slides div.slide div#message {
+        background-color: #f8d043;
+        position: relative;
+    }
+
+    div.slides-wrapper div.vertical-slides.banner div.slide div#message {
+        padding: 6%;
+    }
+
+    div.slides-wrapper div.vertical-slides.mission div.slide div#message div,
+    div.slides-wrapper div.vertical-slides.vision div.slide div#message div {
+        background: unset;
+    }
+
+
+}
+
+@media (min-width: 991px) {
+    div.slides-wrapper div.vertical-slides div.slide div#message {
+        font-size: 1.25em;
+    }
+}
+
+@media (min-width: 1331px) {
+    div.slides-wrapper div.vertical-slides div.slide div#message {
+        font-size: 1.418em;
+    }
+}
+
+@media (min-width: 1551px) {
+    div.slides-wrapper div.vertical-slides div.slide div#message {
+        font-size: 1.618em;
+    }
+}
+
+@media (min-width: 1751px) {
+    div.slides-wrapper div.vertical-slides div.slide div#message {
+        font-size: 1.918em;
+    }
+}
