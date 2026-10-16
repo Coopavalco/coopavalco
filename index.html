@@ -294,7 +294,13 @@
                     let v = document.querySelector('#splashPolicies');
                     if (v) {
                         document.querySelector('body .body').classList.add('splash');
-                        v.querySelector('#splashed').setAttribute('data', 'policies/' + s + '.html');
+                        let oa = v.querySelector('#splashed');
+                        if (oa) {
+                            let oz = oa.cloneNode(false);
+                            oz.setAttribute('data', 'policies/' + s + '.html');
+                            oz.addEventListener('click', x => x.stopPropagation());
+                            oa.parentNode.replaceChild(oz,oa);
+                        }
                         v.classList.add('splash');
                     } else {
                         alert('Algo ha ocurrido.\nA soporte contacte.\n\nsoporte@coopavalco.com')
