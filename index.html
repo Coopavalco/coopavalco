@@ -70,6 +70,7 @@
                             <li><a href="nosotros.html">Nosotros</a></li>
                             <li><a href="elecciones.html">Elecciones</a></li>
                             <li><a href="asambleas.html">Asambleas</a></li>
+                            <li><a href="politicas.html">Políticas</a></li>
                             <li><a href="contacto.html">Contacto</a></li>
                         </ul>
                     </nav>
@@ -144,14 +145,27 @@
         -->
         <main class="products container">
             <h2>Nuestros Servicios</h2>
+            <p>
+                Nuestro portafolio integra <b>respaldo</b>, <b>gestión del riesgo</b>, <v>acompañamiento</v> y <b>soluciones financieras</b>,
+                convirtiéndonos en un aliado estratégico para quienes buscan colocar cartera con mayor confianza y
+                seguridad.
+            </p>
             <div class="cards-container">
+                <div class="card">
+                    <img src="img/tar-Photoroom.png" alt="Afianzamiento" class="card-image">
+                    <h4>Afianzamiento</h4>
+                    <p>Convertimos el riesgo en respaldo y generamos confianza.
+                    </p>
+                    <a href="afianzamiento.html" class="btn-pay">Leer Más</a>
+                </div>
                 <div class="card">
                     <img src="img/tar-Photoroom.png" alt="Directo" class="card-image">
                     <h4>Cobro Directo</h4>
-                    <p>Optimiza tus procesos de cobro Directo con nuestras soluciones adaptadas a tus requerimientos.
+                    <p>Recuperar también es crecer.
                     </p>
                     <a href="cobroDirecto.html" class="btn-pay">Leer Más</a>
                 </div>
+                <!--
                 <div class="card">
                     <img src="img/pse.png" alt="Pago por PSE" class="card-image">
                     <h4>Pago por <i>pse</i></h4>
@@ -163,11 +177,17 @@
                         target="_blank">Pagar
                         Ahora</a>
                 </div>
+                -->
+                <div class="card">
+                    <img src="img/tar-Photoroom.png" alt="Cobro Jurídico" class="card-image">
+                    <h4>Cobro Pre-Jurídico</h4>
+                    <p>Antes de llegar a un proceso, hay oportunidades para recuperar.</p>
+                    <a href="cobroPreJuridico.html" class="btn-pay">Leer Más</a>
+                </div>
                 <div class="card">
                     <img src="img/tar-Photoroom.png" alt="Cobro Jurídico" class="card-image">
                     <h4>Cobro Jurídico</h4>
-                    <p>Contamos con servicios de cobro jurídico especializados para resolver tus necesidades legales
-                        financieras.</p>
+                    <p>Cuando negociar no es suficiente, actuamos.</p>
                     <a href="cobroJuridico.html" class="btn-pay">Leer Más</a>
                 </div>
             </div>
@@ -299,7 +319,7 @@
                             let oz = oa.cloneNode(false);
                             oz.setAttribute('data', 'policies/' + s + '.html');
                             oz.addEventListener('click', x => x.stopPropagation());
-                            oa.parentNode.replaceChild(oz,oa);
+                            oa.parentNode.replaceChild(oz, oa);
                         }
                         v.classList.add('splash');
                     } else {

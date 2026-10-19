@@ -3,6 +3,7 @@ main {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 0 0;
+    margin-bottom: 10em;
     min-height: calc(100vw * 789 / 1920);
     width: 100%;
 }

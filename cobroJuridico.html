@@ -43,6 +43,10 @@
     <!-- custom -->
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/xebni.css" rel="stylesheet" />
+    <link href="css/sunset.css" rel="stylesheet" />
+    <link href="css/cobroJuridico.css" rel="stylesheet" />
+    <link href="css/policies.css" rel="stylesheet" />
+    <link href="css/zplazh.css" rel="stylesheet" />
     <link type="image/png" href="og/coopavalco.png" rel="icon" />
 </head>
 
@@ -61,6 +65,7 @@
                             <li><a href="nosotros.html">Nosotros</a></li>
                             <li><a href="elecciones.html">Elecciones</a></li>
                             <li><a href="asambleas.html">Asambleas</a></li>
+                            <li><a href="politicas.html">Políticas</a></li>
                             <li><a href="contacto.html">Contacto</a></li>
                         </ul>
                     </nav>
@@ -69,8 +74,94 @@
         </div>
         <!-- Main -->
         <main class="body container">
-
+            <!-- Tarjetas con imágenes -->
+            <div class="sunset container">
+                <div class="sunset-container">
+                    <div class="sun"></div>
+                    <div class="ground">
+                        <h2>Cobro Jurídico</h2>
+                        <h3>Cuando negociar no es suficiente, actuamos.</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="shadow container">
+                <p>
+                    Existen obligaciones en las que la gestión extrajudicial no logra la recuperación esperada.
+                </p>
+                <p>
+                    Para estos casos, COOPAVALCO cuenta con una línea de gestión jurídica, orientada a impulsar las
+                    acciones legales correspondientes y realizar seguimiento a los procesos de recuperación.
+                </p>
+                <p>
+                    Nuestro propósito es transformar una cartera de difícil recuperación en <b>casos gestionados
+                        jurídicamente, con trazabilidad y estrategia</b>.
+                </p>
+                <p>Nuestra gestión comprende:</p>
+                <p>
+                <ul>
+                    <li>
+                        Análisis jurídico de las obligaciones.
+                    </li>
+                    <li>
+                        Determinación de la viabilidad de las acciones.
+                    </li>
+                    <li>
+                        Inicio y seguimiento de procesos judiciales cuando corresponda.
+                    </li>
+                    <li>
+                        Impulso procesal.
+                    </li>
+                    <li>
+                        Seguimiento a las actuaciones.
+                    </li>
+                    <li>
+                        Gestión de medidas y actuaciones encaminadas a la recuperación.
+                    </li>
+                    <li>
+                        Reporte y control del estado de los procesos.
+                    </li>
+                </ul>
+                </p>
+            </div>
         </main>
+        <section class="policies container">
+            <div id="sitePolicy">POLÍTICA SITIO WEB DE COOPAVALCO</div>
+            <div id="habeasData">HABEAS DATA</div>
+            <div id="dataPolicy">POLÍTICA DE TRATAMIENTO DE DATOS</div>
+            <div id="cookiesPolicy">POLÍTICA DE COOKIES</div>
+            <div id="sarlaftPolicy">POLÍTICA SARLAFT</div>
+            <div id="privacyNotice">AVISO DE PRIVACIDAD</div>
+            <script>
+                function sitePolicy(e) { splashPolicy(e, 'sitePolicy'); }
+                function habeasData(e) { splashPolicy(e, 'habeasData'); }
+                function dataPolicy(e) { splashPolicy(e, 'dataPolicy'); }
+                function cookiesPolicy(e) { splashPolicy(e, 'cookiesPolicy'); }
+                function sarlaftPolicy(e) { splashPolicy(e, 'sarlaftPolicy'); }
+                function privacyNotice(e) { splashPolicy(e, 'privacyNotice'); }
+                function splashPolicy(e, s) {
+                    let v = document.querySelector('#splashPolicies');
+                    if (v) {
+                        document.querySelector('body .body').classList.add('splash');
+                        let oa = v.querySelector('#splashed');
+                        if (oa) {
+                            let oz = oa.cloneNode(false);
+                            oz.setAttribute('data', 'policies/' + s + '.html');
+                            oz.addEventListener('click', x => x.stopPropagation());
+                            oa.parentNode.replaceChild(oz, oa);
+                        }
+                        v.classList.add('splash');
+                    } else {
+                        alert('Algo ha ocurrido.\nA soporte contacte.\n\nsoporte@coopavalco.com')
+                    }
+                };
+                document.querySelector('section.policies.container #sitePolicy').addEventListener('click', sitePolicy);
+                document.querySelector('section.policies.container #habeasData').addEventListener('click', habeasData);
+                document.querySelector('section.policies.container #dataPolicy').addEventListener('click', dataPolicy);
+                document.querySelector('section.policies.container #cookiesPolicy').addEventListener('click', cookiesPolicy);
+                document.querySelector('section.policies.container #sarlaftPolicy').addEventListener('click', sarlaftPolicy);
+                document.querySelector('section.policies.container #privacyNotice').addEventListener('click', privacyNotice);
+            </script>
+        </section>
         <!-- Floating -->
         <a href="whatsapp://send?phone=+573006542339" target="_blank" style="margin: 0;">
             <div class="quick-btn">
@@ -106,8 +197,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/min/tiny-slider.js"></script>
     -->
+    <div id="splashPolicies" style="top: 0px">
+        <div id="verbum" class="verbum">
+            <object id="splashed" data="policies/">
+        </div>
+    </div>
 </body>
 <script class="maiqui">
+    document.body.querySelectorAll('.body,#splashPolicies').forEach(x => { /*x.classList.add('splash');*/ if (x.id == 'splashPolicies') x.addEventListener('click', function (e) { document.body.querySelectorAll('.body,#splashPolicies').forEach(x => x.classList.remove('splash')) }) });
+    document.body.querySelector('#splashPolicies object#splashed').addEventListener('click', x => x.stopPropagation());
     reload();
 </script>
 

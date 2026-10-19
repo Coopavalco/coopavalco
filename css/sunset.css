@@ -1,0 +1,125 @@
+.shadow li {
+    display: flex;
+    padding-bottom: 2em;
+    text-align: left;
+}
+
+.shadow li::before {
+    background: #bccbcc22;
+    backdrop-filter: blur(9px) contrast(88%);
+    -webkit-backdrop-filter: blur(9px) contrast(88%);
+    border: solid 1px #deedee;
+    border-radius: 100%;
+    box-shadow: 0px 2px 2px #bccbcc;
+    content: '';
+    display: block;
+    height: 11px;
+    margin: auto 1em auto 0;
+    min-height: 11px;
+    min-width: 11px;
+    width: 11px;
+}
+
+.sunset {
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.sunset-container {
+    height: 60vh;
+    position: relative;
+    width: 100%;
+}
+
+.sun:before {
+    background: linear-gradient(-60deg, #777, #000),
+        repeating-linear-gradient(30deg, #000, #999, #000 1px),
+        repeating-linear-gradient(-60deg, #000, #999, #000 1px),
+        repeating-linear-gradient(-150deg, #000, #999, #000 1px);
+    background-blend-mode: screen, difference;
+    border-radius: 100%;
+    box-sizing: border-box;
+    content: '';
+    filter: contrast(20) blur(0.5px);
+    height: 100%;
+    mix-blend-mode: soft-light;
+    position: absolute;
+    width: 100%;
+}
+
+.sun {
+    background: url('../img/mv/vision.jpg'), #f8d043;
+    background-position: top center;
+    background-size: 100%;
+    border-radius: 100%;
+    height: min(33vh, 100vw);
+    left: calc(100vw/2 - 15px - 33vh/2);
+    position: absolute;
+    top: 22%;
+    width: 33vh;
+}
+
+.shadow {
+    text-align: justify;
+    width: 50%;
+}
+
+.shadow p {
+    padding-bottom: 2em;
+}
+
+.ground {
+    background: #bccbcc22;
+    backdrop-filter: blur(9px) contrast(88%);
+    -webkit-backdrop-filter: blur(9px) contrast(88%);
+    border: solid 1px #deedee;
+    border-radius: 33px;
+    box-shadow: 0px 11px 11px #bccbcc;
+    display: flex;
+    flex-flow: column;
+    height: 33%;
+    justify-content: space-evenly;
+    left: 25%;
+    padding: 1em;
+    position: absolute;
+    text-align: center;
+    top: 60%;
+    width: 50%;
+}
+
+.ground p {
+    padding: 1em 0;
+}
+
+@media (max-width: 991px) {
+    .ground {
+        width: 70%;
+        left: 15%;
+    }
+
+    .shadow {
+        width: 70%;
+    }
+}
+
+@media (max-width: 707px) {
+    .ground {
+        width: 80%;
+        left: 10%;
+    }
+
+    .shadow {
+        width: 80%;
+    }
+}
+
+@media (max-width: 505px) {
+    .ground {
+        width: 90%;
+        left: 5%;
+    }
+
+    .shadow {
+        width: 90%;
+    }
+}

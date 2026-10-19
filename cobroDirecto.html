@@ -43,6 +43,10 @@
     <!-- custom -->
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/xebni.css" rel="stylesheet" />
+    <link href="css/sunset.css" rel="stylesheet" />
+    <link href="css/cobroDirecto.css" rel="stylesheet" />
+    <link href="css/policies.css" rel="stylesheet" />
+    <link href="css/zplazh.css" rel="stylesheet" />
     <link type="image/png" href="og/coopavalco.png" rel="icon" />
 </head>
 
@@ -61,6 +65,7 @@
                             <li><a href="nosotros.html">Nosotros</a></li>
                             <li><a href="elecciones.html">Elecciones</a></li>
                             <li><a href="asambleas.html">Asambleas</a></li>
+                            <li><a href="politicas.html">Políticas</a></li>
                             <li><a href="contacto.html">Contacto</a></li>
                         </ul>
                     </nav>
@@ -69,8 +74,108 @@
         </div>
         <!-- Main -->
         <main class="body container">
-
+            <!-- Tarjetas con imágenes -->
+            <div class="sunset container">
+                <div class="sunset-container">
+                    <div class="sun"></div>
+                    <div class="ground">
+                        <h2>Cobro Directo</h2>
+                        <h3>Recuperar también es crecer.</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="shadow container">
+                <p>
+                    Una cartera sana no depende únicamente de colocar buenos créditos, <b>depende de recuperar
+                        oportunamente los recursos</b>.
+                    Nuestro servicio de cobro directo está orientado a intervenir tempranamente las obligaciones que
+                    presentan incumplimiento, buscando la <b>normalización de la cartera y la recuperación efectiva de
+                        los
+                        recursos</b>.
+                    Desarrollamos una gestión organizada, permanente y enfocada en resultados.
+                </p>
+                <h3>¿Qué buscamos?</h3>
+                <p>
+                <ul>
+                    <li>
+                        Contactar oportunamente al deudor y/o asociado.
+                    </li>
+                    <li>
+                        Identificar las causas de la mora.
+                    </li>
+                    <li>
+                        Generar alternativas de normalización.
+                    </li>
+                    <li>
+                        Formalizar acuerdos de pago.
+                    </li>
+                    <li>
+                        Realizar seguimiento a los compromisos.
+                    </li>
+                    <li>
+                        Disminuir los niveles de mora.
+                    </li>
+                    <li>
+                        Mejorar los indicadores de cartera.
+                    </li>
+                </ul>
+                </p>
+                <p>
+                    Cada obligación requiere una estrategia y un seguimiento, por eso nuestro modelo combina <b>gestión
+                        humana, organización, seguimiento y enfoque en resultados</b>.
+                </p>
+                <p>
+                    Nuestra gestión se encuentra especialmente alineada con las disposiciones aplicables en materia de
+                    <b>servicio al cliente, atención respetuosa y oportuna, protección de datos personales,
+                        confidencialidad y adecuado tratamiento de la información</b>, garantizando que cada contacto y
+                    actuación dentro del proceso de recuperación de cartera se realice de manera <b>transparente,
+                        profesional y responsable</b>.
+                </p>
+                <p>
+                    De esta manera, combinamos <b>eficiencia en la recuperación de cartera con cumplimiento, protección de
+                    la información y calidad en el servicio</b>, fortaleciendo la confianza y la relación con nuestros
+                    clientes.
+                </p>
+            </div>
         </main>
+        <section class="policies container">
+            <div id="sitePolicy">POLÍTICA SITIO WEB DE COOPAVALCO</div>
+            <div id="habeasData">HABEAS DATA</div>
+            <div id="dataPolicy">POLÍTICA DE TRATAMIENTO DE DATOS</div>
+            <div id="cookiesPolicy">POLÍTICA DE COOKIES</div>
+            <div id="sarlaftPolicy">POLÍTICA SARLAFT</div>
+            <div id="privacyNotice">AVISO DE PRIVACIDAD</div>
+            <script>
+                function sitePolicy(e) { splashPolicy(e, 'sitePolicy'); }
+                function habeasData(e) { splashPolicy(e, 'habeasData'); }
+                function dataPolicy(e) { splashPolicy(e, 'dataPolicy'); }
+                function cookiesPolicy(e) { splashPolicy(e, 'cookiesPolicy'); }
+                function sarlaftPolicy(e) { splashPolicy(e, 'sarlaftPolicy'); }
+                function privacyNotice(e) { splashPolicy(e, 'privacyNotice'); }
+                function splashPolicy(e, s) {
+                    let v = document.querySelector('#splashPolicies');
+                    if (v) {
+                        document.querySelector('body .body').classList.add('splash');
+                        let oa = v.querySelector('#splashed');
+                        if (oa) {
+                            let oz = oa.cloneNode(false);
+                            oz.setAttribute('data', 'policies/' + s + '.html');
+                            oz.addEventListener('click', x => x.stopPropagation());
+                            oa.parentNode.replaceChild(oz, oa);
+                        }
+                        v.classList.add('splash');
+                    } else {
+                        alert('Algo ha ocurrido.\nA soporte contacte.\n\nsoporte@coopavalco.com')
+                    }
+                };
+                document.querySelector('section.policies.container #sitePolicy').addEventListener('click', sitePolicy);
+                document.querySelector('section.policies.container #habeasData').addEventListener('click', habeasData);
+                document.querySelector('section.policies.container #dataPolicy').addEventListener('click', dataPolicy);
+                document.querySelector('section.policies.container #cookiesPolicy').addEventListener('click', cookiesPolicy);
+                document.querySelector('section.policies.container #sarlaftPolicy').addEventListener('click', sarlaftPolicy);
+                document.querySelector('section.policies.container #privacyNotice').addEventListener('click', privacyNotice);
+            </script>
+        </section>
         <!-- Floating -->
         <a href="whatsapp://send?phone=+573006542339" target="_blank" style="margin: 0;">
             <div class="quick-btn">
@@ -106,8 +211,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/min/tiny-slider.js"></script>
     -->
+    <div id="splashPolicies" style="top: 0px">
+        <div id="verbum" class="verbum">
+            <object id="splashed" data="policies/">
+        </div>
+    </div>
 </body>
 <script class="maiqui">
+    document.body.querySelectorAll('.body,#splashPolicies').forEach(x => { /*x.classList.add('splash');*/ if (x.id == 'splashPolicies') x.addEventListener('click', function (e) { document.body.querySelectorAll('.body,#splashPolicies').forEach(x => x.classList.remove('splash')) }) });
+    document.body.querySelector('#splashPolicies object#splashed').addEventListener('click', x => x.stopPropagation());
     reload();
 </script>
 

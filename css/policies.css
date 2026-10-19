@@ -1,3 +1,6 @@
+.pl div {
+    margin-bottom: 3em;
+}
 .policies {
     display: flex;
     flex-wrap: wrap;
@@ -10,8 +13,12 @@
     padding: 15px;
 }
 
-.policies div:hover {
+.policies div:hover,
+.policyFrame:hover {
     cursor: pointer;
+}
+
+.policies div:hover {
     font-weight: bold;
 }
 
