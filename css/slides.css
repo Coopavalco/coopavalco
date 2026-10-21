@@ -15,7 +15,8 @@
     position: relative;
 }
 
-div.slides-wrapper div.vertical-slides:before {
+/*div.slides-wrapper div.vertical-slides:before*/
+div.slides-wrapper div.vertical-slides:first-child:before {
     content: ' ';
     background: url('../res/coopavalco.full.png');
     background-size: contain;
@@ -65,9 +66,16 @@ div.slides-wrapper div.vertical-slides.vision div#img:after {
     background-repeat: no-repeat;
     border-radius: 33px;
     height: calc(100% - 150px);
-    right: 75px;
+    /*right: 75px;*/
     top: 75px;
     width: 50%;
+}
+
+div.slides-wrapper div.vertical-slides.mission div#img:after {
+    right: 75px;
+}
+div.slides-wrapper div.vertical-slides.vision div#img:after {
+    left: 75px;
 }
 
 div.slides-wrapper div.vertical-slides div.slide div#message {
@@ -89,7 +97,8 @@ div.slides-wrapper div.vertical-slides div.slide div#message div {
 div.slides-wrapper div.vertical-slides.banner div.slide div#message {
     bottom: 55%;
     height: calc(45% - 75px);
-    right: 0;
+    /*right: 0;*/
+    left: 7%;
     width: 66%;
 }
 
@@ -97,9 +106,17 @@ div.slides-wrapper div.vertical-slides.banner div.slide div#message {
 div.slides-wrapper div.vertical-slides.mission div.slide div#message,
 div.slides-wrapper div.vertical-slides.vision div.slide div#message {
     height: 1px;
-    left: 22%;
+    /*left: 22%;*/
     top: 66%;
     width: 55%;
+}
+
+div.slides-wrapper div.vertical-slides.mission div.slide div#message {
+    left: 22%;
+}
+
+div.slides-wrapper div.vertical-slides.vision div.slide div#message {
+    right: 4%;
 }
 
 div.slides-wrapper div.vertical-slides.mission div.slide div#message div,
@@ -109,6 +126,14 @@ div.slides-wrapper div.vertical-slides.vision div.slide div#message div {
     font-size: 1.1em;
     padding: 3%;
 }
+
+div.slides-wrapper div.vertical-slides.mission div.slide div#message div {
+    background-color: #fff8;
+}
+div.slides-wrapper div.vertical-slides.vision div.slide div#message div {
+    background-color: #f8d25088;
+}
+
 
 .slides-container {
     display: flex;
@@ -135,7 +160,8 @@ div.slides-wrapper div.vertical-slides.vision div.slide div#message div {
         margin-top: 75px;
     }
 
-    div.slides-wrapper div.vertical-slides:before {
+    /*div.slides-wrapper div.vertical-slides:before*/
+    div.slides-wrapper div.vertical-slides:first-child:before {
         content: none;
     }
 
@@ -146,6 +172,7 @@ div.slides-wrapper div.vertical-slides.vision div.slide div#message div {
     div.slides-wrapper div.vertical-slides.banner div.slide div#message {
         bottom: 0;
         height: 30%;
+        left: 0;
         padding: 0 6%;
         right: 0;
         width: 100%;
@@ -178,11 +205,18 @@ div.slides-wrapper div.vertical-slides.vision div.slide div#message div {
     div.slides-wrapper div.vertical-slides.mission div#img:after,
     div.slides-wrapper div.vertical-slides.vision div#img:after {
         border-radius: 0;
+        filter: none;
+        -webkit-filter: none;
         height: 100%;
         left: 0;
         top: 0;
         width: 100%;
     }
+
+    div.slides-wrapper div.vertical-slides.vision div#img:after {
+        border-top: solid 9px #f8d151;
+    }
+
 }
 
 @media (max-width: 700px) {

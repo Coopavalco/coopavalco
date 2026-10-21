@@ -49,6 +49,7 @@
     <link href="css/slides.css" rel="stylesheet" />
     <link href="css/cards.css" rel="stylesheet" />
     <link href="css/info.css" rel="stylesheet" />
+    <link href="css/paymentChannels" rel="stylesheet" />
     <link href="css/allies.css" rel="stylesheet" />
     <link href="css/policies.css" rel="stylesheet" />
     <link href="css/zplazh.css" rel="stylesheet" />
@@ -99,6 +100,7 @@
                 </div>
                 -->
                 <div class="slides-wrapper">
+                    <!--
                     <div id="vertical-slides" class="vertical-slides">
                         <div class="slides-container">
                             <div class="slide">
@@ -109,8 +111,48 @@
                             </div>
                         </div>
                     </div>
+                    -->
+                    <div id="vertical-slides" class="vertical-slides mission">
+                        <div class="slides-container">
+                            <div class="slide">
+                                <div id="img"><img alt="Coopavalco" src="img/artboard/blank.png"></div>
+                                <div id="message">
+                                    <div>
+                                        En COOPAVALCO transformamos el afianzamiento en confianza, respaldo y
+                                        oportunidades para crecer.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="vertical-slides" class="vertical-slides vision">
+                        <div class="slides-container">
+                            <div class="slide">
+                                <div id="img"><img alt="Coopavalco" src="img/artboard/mirror.png"></div>
+                                <div id="message">
+                                    <div>
+                                        Ofrecemos un modelo de afianzamiento innovador, ágil y diferente.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="vertical-slides" class="vertical-slides banner">
+                        <div class="slides-container">
+                            <div class="slide">
+                                <div id="img"><img alt="Coopavalco" src="img/artboard/white.png"></div>
+                                <div id="message">
+                                    <div>
+                                        No solo afianzamos obligaciones: construimos soluciones, protegemos relaciones
+                                        comerciales y acompañamos a nuestros aliados y asociados en cada etapa.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <script id="slides-script">
+                    /*
                     i = Math.ceil(Math.random() * 3 - 1);
                     t = ['mission', 'vision', 'banner'][i];
                     s = ['En COOPAVALCO transformamos el afianzamiento en confianza, respaldo y oportunidades para crecer.',
@@ -127,6 +169,7 @@
                             if (vs) vs.innerText = s;
                         }
                     }
+                    */
                 </script>
             </header>
         </div>
@@ -146,7 +189,8 @@
         <main class="products container">
             <h2>Nuestros Servicios</h2>
             <p>
-                Nuestro portafolio integra <b>respaldo</b>, <b>gestión del riesgo</b>, <v>acompañamiento</v> y <b>soluciones financieras</b>,
+                Nuestro portafolio integra <b>respaldo</b>, <b>gestión del riesgo</b>, <v>acompañamiento</v> y
+                <b>soluciones financieras</b>,
                 convirtiéndonos en un aliado estratégico para quienes buscan colocar cartera con mayor confianza y
                 seguridad.
             </p>
@@ -260,16 +304,50 @@
         </section>
         <section class="info container bis">
             <div class="info-1" data-aos="fade-up">
-                <img src="img/time.svg" alt="Icono de Horario">
+                <img src="img/time.svg" alt="Horario">
                 <h3>Horario de Atención</h3>
                 <p>Lunes a Jueves de 7:30 ㏂ a 5:00 ㏘<br>Viernes de 7:30 ㏂ a 4:30 ㏘</p>
             </div>
             <div class="info-1" data-aos="fade-up" data-aos-delay="200">
-                <img src="img/gps.svg" alt="Icono de Ubicación">
+                <img src="img/gps.svg" alt="Ubicación">
                 <h3>Nuestra Ubicación</h3>
-                <p>Calle 35 #18-65 Centro Comercial Rosedal torre sur oficina 604</p>
-                <p>Bucaramanga - Santander</p>
+                <a href="https://maps.app.goo.gl/DMJcxV8bEm5cn4mQ6" target="_blank">
+                    <p>
+                        Calle 35 #18-65 Centro Comercial Rosedal torre sur oficina 604</p>
+                    <p>
+                        Bucaramanga - Santander
+                    </p>
+                </a>
             </div>
+            <div class="info-1" data-aos="fade-up" data-aos-delay="200">
+                <img src="img/arroba.svg" alt="Correo Electrónico">
+                <h3>Correo Electrónico</h3>
+                <p><a href="mailto:servicio@coopavalco.com">servicio@coopavalco.com</a></p>
+                <p><a href="mailto:retencion79@coopavalco.com">retencion79@coopavalco.com</a></p>
+            </div>
+        </section>
+        <section class="allies payment-channels container">
+            <h2>Canales de Pago</h2>
+            <p></p>
+            <div class="allies-logos">
+                <div class="ally">
+                    <a href="https://micrositios.avalpaycenter.com/trascender-financiero-fi-ami-mc/login"
+                        target="_blank">
+                        <img src="img/allies/pse.png" alt="pse">
+                    </a>
+                </div>
+                <div class="ally">
+                    <a href="#"
+                        onclick="alert('Antes de efectuar cualquier pago, el asociado deberá comunicarse con su Gestor de Cartera, quien le informará el convenio y el CUR para confirmar cual es el canal de pago autorizado y asignado.'); return false;">
+                        <img src="img/allies/efecty.svg" alt="Efecty">
+                    </a>
+                </div>
+            </div>
+            <p>
+                Antes de efectuar cualquier pago, el usuario deberá comunicarse con su Gestor de Cartera, quien le
+                informará el canal de pago autorizado y asignado, garantizando así que la transacción se realice de
+                manera segura y conforme a los procedimientos establecidos.
+            </p>
         </section>
         <section class="allies container">
             <h2>Nuestros Aliados</h2>
@@ -284,6 +362,16 @@
                 </div>
                 <div class="ally">
                     <img src="img/allies/datacreditoExperian.png" alt="datacrédito experian">
+                </div>
+                <div class="ally">
+                    <img src="img/allies/efecty.svg" alt="Efecty">
+                </div>
+                <div class="ally">
+                    <img src="img/allies/coobolarqui.png"
+                        alt="Cooperativa de Crédito y Servicio Bolarqui - Coobolarqui">
+                </div>
+                <div class="ally">
+                    <img src="img/allies/coopmutual.png" alt="Cooperativa De Aporte y Crédito Mutual - Coopmutual">
                 </div>
                 <div class="ally">
                     <img src="img/allies/sialia.png" alt="Sialia Financiera SAS">

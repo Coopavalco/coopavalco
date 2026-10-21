@@ -1,0 +1,16 @@
+.payment-channels {
+    background-color: #fdf4dd;
+}
+
+.payment-channels .ally img {
+  width: 360px;
+  height: 200px;
+}
+
+@media (max-width: 760px) {
+
+.payment-channels .ally img {
+  width: 180px;
+  height: 100px;
+}
+}

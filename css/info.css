@@ -8,6 +8,15 @@
     background: linear-gradient(to bottom, transparent, #ffe595)
 }
 
+.info a{
+    color:rgb(35, 34, 34);
+}
+
+.info a:hover{
+    text-decoration: underline;
+}
+
+
 .info.bis {
     background: url(../img/card-top.png) no-repeat top center, linear-gradient(to bottom, #ffe595, #ffca22);
     background-size: 100vw max(100%,379px);
@@ -46,7 +55,7 @@
     /* Estilos para la sección de información en dispositivos móviles */
     .info {
         flex-wrap: wrap;
-        /* padding: 50px 20px; */
+        padding: 50px 20px;
         /* Ajusta el relleno para adaptarse al contenido */
         text-align: center;
         /* Centra el contenido */
@@ -78,6 +87,16 @@
 }
 
 @media (max-width: 760px) {
+
+    .info:nth-of-type(1){
+        padding: 77px 0 0 0;
+    }
+    
+    .info.bis {
+        padding: 0 0 77px 0;
+    }
+
+
     .info div {
         flex-grow: 1 !important;
     }
