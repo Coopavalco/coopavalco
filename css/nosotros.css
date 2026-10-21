@@ -1,3 +1,4 @@
+.contributions,
 .values {
     padding-bottom: 99px;
 }
@@ -8,6 +9,7 @@
     padding-bottom: 99px;
 }
 
+.contributions h2,
 .values h2,
 .mv h2,
 .sg h2,
@@ -15,6 +17,7 @@
     padding: 0 0 44px 0;
 }
 
+.contributions div,
 .values div,
 .mv div,
 .sg div,
@@ -24,6 +27,7 @@
     justify-content: center;
 }
 
+.contributions div,
 .values div {
     gap: 66px;
 
@@ -35,7 +39,7 @@
     gap: 99px;
 }
 
-
+.contributions .contribution,
 .values .value,
 .mv .mission,
 .mv .vision {
@@ -48,6 +52,7 @@
     justify-content: space-around;
 }
 
+.contributions .contribution,
 .values .value,
 .mv .mission,
 .mv .vision,
@@ -72,8 +77,17 @@
     }
 }
 
+.contributions .contribution {
+    background-color: #fdf4dc;
+}
+
 .values .value {
     background-color: #f8d250;
+}
+
+.contributions .contribution,
+.values .value {
+    /*background-color: #f8d250;*/
     width: 333px;
 
     div {
@@ -87,13 +101,23 @@
         width: 111px;
     }
 
+    div.contributeEmoji {
+        display: flex;
+        flex-flow: column;
+        justify-content: space-around;
+
+        span {
+            font-size: 44px;
+            text-align: center;
+            width: 100%;
+        }
+    }
+
     img {
         max-width: 66px;
         max-height: 66px;
     }
 }
-
-
 
 .mv .mission,
 .mv .vision,
@@ -129,6 +153,7 @@
     color: #544544;
 }
 
+.contributions .contribution:hover,
 .values .value:hover,
 .mv .mission:hover,
 .mv .vision:hover,
@@ -139,7 +164,6 @@
 }
 
 @media (max-width: 754px) {
-
     .mv .mission,
     .mv .vision,
     .sg .strategicGoals,

@@ -1,0 +1,46 @@
+:root {
+    --border: #fffb;
+    --shining: 4px;
+    --thick: 3px;
+    --kciht: -3px;
+}
+
+#section-contacto {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 22px 22vw 0 22vw;
+}
+
+#map {
+    min-height: 444px;
+    padding-bottom:55px;
+    padding-top: 55px;
+}
+
+#map iframe {
+    border: 0px;
+    border-radius: 33px;
+    filter: drop-shadow(var(--kciht) var(--thick) var(--shining) var(--border)) drop-shadow(var(--kciht) var(--kciht) var(--shining) var(--border)) drop-shadow(var(--kciht) 0 var(--shining) var(--border)) drop-shadow(0 var(--kciht) var(--shining) var(--border)) drop-shadow(0 var(--thick) var(--shining) var(--border)) drop-shadow(var(--thick) 0 var(--shining) var(--border)) drop-shadow(var(--thick) var(--thick) var(--shining) var(--border)) drop-shadow(var(--thick) var(--kciht) var(--shining) var(--border));
+    -webkit-filter: drop-shadow(var(--kciht) var(--thick) var(--shining) var(--border)) drop-shadow(var(--kciht) var(--kciht) var(--shining) var(--border)) drop-shadow(var(--kciht) 0 var(--shining) var(--border)) drop-shadow(0 var(--kciht) var(--shining) var(--border)) drop-shadow(0 var(--thick) var(--shining) var(--border)) drop-shadow(var(--thick) 0 var(--shining) var(--border)) drop-shadow(var(--thick) var(--thick) var(--shining) var(--border)) drop-shadow(var(--thick) var(--kciht) var(--shining) var(--border));
+    pointer-events: none;
+}
+
+#info {
+    text-align: left;
+}
+#info > div {
+    padding-bottom: 1.618rem;
+}
+
+@media (max-width: 991px) {
+    #section-contacto {
+        padding: 0 30px;
+    }
+}
+
+
+@media (max-width: 555px) {
+    #section-contacto {
+        padding: 0;
+    }
+}
